@@ -1,6 +1,11 @@
 {
-    "name": "dutakey/commentify",
-    "description": "Easy Laravel Livewire Comments with TailwindCSS UI",
+    "name": "dutakey/classgram-commentify",
+    "authors": [
+        {
+            "name": "OmDutaa",
+            "email": "85216552+DutaKey@users.noreply.github.com"
+        }
+    ],
     "keywords": [
         "dutakey",
         "laravel-livewire",

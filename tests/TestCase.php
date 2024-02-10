@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 use Livewire\LivewireServiceProvider;
-use Usamamuneerchaudhary\Commentify\Providers\CommentifyServiceProvider;
+use DutaKey\Commentify\Providers\CommentifyServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -30,7 +30,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
 
         $this->artisan('migrate', [
             '--database' => 'testbench',
-            '--realpath' => realpath(__DIR__.'/../database/migrations')
+            '--realpath' => realpath(__DIR__ . '/../database/migrations')
         ]);
     }
 
@@ -79,5 +79,4 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
             $table->timestamps();
         });
     }
-
 }

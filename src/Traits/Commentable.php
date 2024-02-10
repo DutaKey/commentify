@@ -1,9 +1,9 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Traits;
+namespace DutaKey\Commentify\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Usamamuneerchaudhary\Commentify\Models\Comment;
+use DutaKey\Commentify\Models\Comment;
 
 trait Commentable
 {
@@ -15,5 +15,4 @@ trait Commentable
     {
         return $this->morphMany(Comment::class, 'commentable');
     }
-
 }

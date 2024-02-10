@@ -1,10 +1,10 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Scopes;
+namespace DutaKey\Commentify\Scopes;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Usamamuneerchaudhary\Commentify\Models\CommentLike;
-use Usamamuneerchaudhary\Commentify\Models\User;
+use DutaKey\Commentify\Models\CommentLike;
+use DutaKey\Commentify\Models\User;
 
 trait HasLikes
 {

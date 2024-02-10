@@ -1,9 +1,9 @@
 <?php
 
-use Usamamuneerchaudhary\Commentify\Models\Presenters\CommentPresenter;
-use Usamamuneerchaudhary\Commentify\Models\Comment;
+use DutaKey\Commentify\Models\Presenters\CommentPresenter;
+use DutaKey\Commentify\Models\Comment;
 use Illuminate\Support\HtmlString;
-use Usamamuneerchaudhary\Commentify\Models\User;
+use DutaKey\Commentify\Models\User;
 
 class CommentPresenterTest extends TestCase
 {
@@ -42,8 +42,10 @@ class CommentPresenterTest extends TestCase
     public function it_can_convert_comment_body_to_markdown_html()
     {
         $expectedOutput = 'This is a test comment';
-        $this->assertEquals(new HtmlString(app('markdown')->convertToHtml($expectedOutput)),
-            $this->commentPresenter->markdownBody());
+        $this->assertEquals(
+            new HtmlString(app('markdown')->convertToHtml($expectedOutput)),
+            $this->commentPresenter->markdownBody()
+        );
     }
 
     /** @test */

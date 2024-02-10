@@ -1,11 +1,11 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Database\Factories;
+namespace DutaKey\Commentify\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Usamamuneerchaudhary\Commentify\Models\Comment;
-use Usamamuneerchaudhary\Commentify\Models\User;
+use DutaKey\Commentify\Models\Comment;
+use DutaKey\Commentify\Models\User;
 
 
 class CommentFactory extends Factory

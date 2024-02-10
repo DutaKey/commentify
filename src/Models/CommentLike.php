@@ -1,6 +1,6 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Models;
+namespace DutaKey\Commentify\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Usamamuneerchaudhary\Commentify\Database\Factories\CommentFactory;
-use Usamamuneerchaudhary\Commentify\Models\Presenters\CommentPresenter;
-use Usamamuneerchaudhary\Commentify\Scopes\CommentScopes;
+use DutaKey\Commentify\Database\Factories\CommentFactory;
+use DutaKey\Commentify\Models\Presenters\CommentPresenter;
+use DutaKey\Commentify\Scopes\CommentScopes;
 
 class CommentLike extends Model
 {
@@ -49,5 +49,4 @@ class CommentLike extends Model
     {
         return $query->where('user_agent', $userAgent);
     }
-
 }

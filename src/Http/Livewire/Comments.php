@@ -1,6 +1,6 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Http\Livewire;
+namespace DutaKey\Commentify\Http\Livewire;
 
 
 use Illuminate\Contracts\View\Factory;
@@ -35,8 +35,7 @@ class Comments extends Component
     /**
      * @return Factory|Application|View|\Illuminate\Contracts\Foundation\Application|null
      */
-    public function render(
-    ): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application|null
+    public function render(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application|null
     {
         $comments = $this->model
             ->comments()
@@ -72,5 +71,4 @@ class Comments extends Component
         $this->resetPage();
         session()->flash('message', 'Comment Posted Successfully!');
     }
-
 }

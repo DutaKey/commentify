@@ -1,10 +1,10 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Models\Presenters;
+namespace DutaKey\Commentify\Models\Presenters;
 
 use Illuminate\Support\HtmlString;
-use Usamamuneerchaudhary\Commentify\Models\Comment;
-use Usamamuneerchaudhary\Commentify\Models\User;
+use DutaKey\Commentify\Models\Comment;
+use DutaKey\Commentify\Models\User;
 
 class CommentPresenter
 {
@@ -48,20 +48,18 @@ class CommentPresenter
         $replacements = [];
 
         foreach ($usernames as $username) {
-            $user = User::where('name', $username)->first();
+            $user = User::where('username', $username)->first();
 
             if ($user) {
                 $userRoutePrefix = config('commentify.users_route_prefix', 'users');
 
-                $replacements['@'.$username] = '<a href="/'.$userRoutePrefix.'/'.$username.'">@'.$username.
+                $replacements['@' . $username] = '<a href="/' . $userRoutePrefix . '/' . $username . '">@' . $username .
                     '</a>';
             } else {
-                $replacements['@'.$username] = '@'.$username;
+                $replacements['@' . $username] = '@' . $username;
             }
         }
 
         return str_replace(array_keys($replacements), array_values($replacements), $text);
     }
-
-
 }

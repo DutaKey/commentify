@@ -1,9 +1,9 @@
 <?php
 
 use Livewire\Livewire;
-use Usamamuneerchaudhary\Commentify\Models\Comment;
-use Usamamuneerchaudhary\Commentify\Http\Livewire\Comments;
-use Usamamuneerchaudhary\Commentify\Models\User;
+use DutaKey\Commentify\Models\Comment;
+use DutaKey\Commentify\Http\Livewire\Comments;
+use DutaKey\Commentify\Models\User;
 
 class CommentsComponentTest extends TestCase
 {
@@ -141,7 +141,7 @@ class CommentsComponentTest extends TestCase
         Livewire::test(Comments::class, ['model' => $this->article])
             ->assertSee(10)
             ->assertSeeHtml('<span wire:key="paginator-page-page1">')
-            ->assertSee(2);//second page link
+            ->assertSee(2); //second page link
     }
 
     /** @test */
@@ -166,5 +166,4 @@ class CommentsComponentTest extends TestCase
             ->assertViewIs('commentify::livewire.comments')
             ->assertViewHas('comments');
     }
-
 }

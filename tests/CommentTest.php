@@ -1,7 +1,7 @@
 <?php
 
-use Usamamuneerchaudhary\Commentify\Models\Comment;
-use Usamamuneerchaudhary\Commentify\Models\User;
+use DutaKey\Commentify\Models\Comment;
+use DutaKey\Commentify\Models\User;
 
 class CommentTest extends TestCase
 {

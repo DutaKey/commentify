@@ -1,6 +1,6 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Http\Livewire;
+namespace DutaKey\Commentify\Http\Livewire;
 
 
 use Illuminate\Contracts\View\Factory;
@@ -15,7 +15,7 @@ class Like extends Component
     public $count;
 
 
-    public function mount(\Usamamuneerchaudhary\Commentify\Models\Comment $comment): void
+    public function mount(\DutaKey\Commentify\Models\Comment $comment): void
     {
         $this->comment = $comment;
         $this->count = $comment->likes_count;
@@ -48,10 +48,8 @@ class Like extends Component
     /**
      * @return Factory|Application|View|\Illuminate\Contracts\Foundation\Application|null
      */
-    public function render(
-    ): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application|null
+    public function render(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application|null
     {
         return view('commentify::livewire.like');
     }
-
 }

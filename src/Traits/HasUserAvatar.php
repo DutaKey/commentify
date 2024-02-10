@@ -1,6 +1,6 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Traits;
+namespace DutaKey\Commentify\Traits;
 
 trait HasUserAvatar
 {
@@ -10,6 +10,6 @@ trait HasUserAvatar
      */
     public function avatar(): string
     {
-        return 'https://gravatar.com/avatar/'.md5($this->email).'?s=80&d=mp';
+        return 'https://gravatar.com/avatar/' . md5($this->email) . '?s=80&d=mp';
     }
 }

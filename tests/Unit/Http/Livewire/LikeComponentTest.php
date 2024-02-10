@@ -1,8 +1,8 @@
 <?php
 
 use Livewire\Livewire;
-use Usamamuneerchaudhary\Commentify\Http\Livewire\Like;
-use Usamamuneerchaudhary\Commentify\Models\User;
+use DutaKey\Commentify\Http\Livewire\Like;
+use DutaKey\Commentify\Models\User;
 
 class LikeComponentTest extends TestCase
 {

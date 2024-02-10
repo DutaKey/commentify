@@ -1,10 +1,10 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Policies;
+namespace DutaKey\Commentify\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Auth\Access\Response;
-use Usamamuneerchaudhary\Commentify\Models\Comment;
+use DutaKey\Commentify\Models\Comment;
 
 class CommentPolicy
 {

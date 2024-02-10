@@ -1,6 +1,6 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Scopes;
+namespace DutaKey\Commentify\Scopes;
 
 
 use Illuminate\Database\Eloquent\Builder;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Usamamuneerchaudhary\Commentify\Providers;
+namespace DutaKey\Commentify\Providers;
 
 
 use Illuminate\Support\ServiceProvider;

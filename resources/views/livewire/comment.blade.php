@@ -8,12 +8,12 @@
             'button' => 'Edit Comment',
         ])
     @else
-        <article class="p-6 mb-1 text-base bg-white rounded-lg dark:bg-gray-900">
+        <article class="p-6 mb-1 text-base bg-white rounded-lg dark:bg-[#0d0d0d]">
             <footer class="flex justify-between items-center mb-1">
                 <div class="flex items-center">
                     <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img
                             class="mr-2 w-6 h-6 rounded-full"
-                            src="{{ asset($comment->user->user_profile) ?? asset('guest.png') }}"
+                            src="{{ $comment->user->user_profile ? asset($comment->user->user_profile) : asset('guest.png') }}"
                             alt="{{ $comment->user->username }}">{{ Str::ucfirst($comment->user->username) }}
                         <livewire:component.verified :user="$comment->user" />
                     </p>
@@ -44,14 +44,13 @@
                                     <li>
                                         <button wire:click="$toggle('isEditing')" type="button"
                                             class="block w-full text-left py-2 px-4 hover:bg-gray-100
-                                           dark:hover:bg-gray-600
-                                           dark:hover:text-white">Edit
+                                            dark:hover:bg-gray-600
+                                            dark:hover:text-white">Edit
                                         </button>
                                     </li>
                                 @endcan
                                 @can('destroy', $comment)
                                     <li>
-
                                         <button x-on:click="confirmCommentDeletion" x-data="{
                                             confirmCommentDeletion() {
                                                 if (window.confirm('You sure to delete this comment?')) {
